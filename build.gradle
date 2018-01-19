@@ -1,0 +1,14 @@
+dependencies {
+    compile 'org.neo4j:neo4j-cypher:3.1.0'
+    compile 'net.sourceforge.argparse4j:argparse4j:0.7.0'
+    compile 'org.apache.httpcomponents:httpclient:4.5.3'
+    compile 'org.json:json:20170516'
+}
+
+apply plugin: 'application'
+mainClassName = "analyzer.Main"
+
+apply plugin: "com.github.johnrengelman.shadow"
+shadowJar {
+    mergeServiceFiles()
+}
